@@ -5,10 +5,10 @@ import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pixel_adventure/components/player.dart';
-import 'package:pixel_adventure/components/levels.dart';
+import 'package:pixel_adventure/components/level.dart';
 
 class PixelAdventure extends FlameGame
-    with HasKeyboardHandlerComponents, DragCallbacks {
+    with HasKeyboardHandlerComponents, DragCallbacks, HasCollisionDetection {
   @override
 
   // set background of phone to the same as in tiled
