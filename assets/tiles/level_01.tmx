@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="31">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="32">
  <tileset firstgid="1" source="PixelAdventure.tsx"/>
  <layer id="1" name="Background" width="40" height="23">
   <properties>
@@ -72,6 +72,7 @@
     <property name="offPositive" type="float" value="16"/>
    </properties>
   </object>
-  <object id="30" type="Checkpoint" x="528" y="208" width="64" height="64"/>
+  <object id="30" name="Checkpoint" type="Checkpoint" x="528" y="208" width="64" height="64"/>
+  <object id="31" x="176" y="-32"/>
  </objectgroup>
 </map>

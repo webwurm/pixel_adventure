@@ -14,21 +14,26 @@
         },
         "level_01.tmx": {
             "expandedObjectLayers": [
-                2
+                2,
+                3
             ],
             "scale": 1.3299999999999998,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 358.27067669172936,
+                "x": 381.5789473684211,
                 "y": 184.58646616541358
             }
         },
         "level_02.tmx": {
+            "expandedObjectLayers": [
+                2,
+                3
+            ],
             "scale": 1.3299999999999998,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
                 "x": 319.9248120300752,
-                "y": 184.58646616541358
+                "y": 183.8345864661654
             }
         }
     },
