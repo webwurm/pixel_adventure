@@ -3,6 +3,8 @@ import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/input.dart';
+import 'package:flame/palette.dart';
+import 'package:flame/text.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pixel_adventure/components/jump_button.dart';
 import 'package:pixel_adventure/components/player.dart';
@@ -22,6 +24,7 @@ class PixelAdventure extends FlameGame
   late CameraComponent cam;
   Player player = Player(character: 'Mask Dude');
   late JoystickComponent joystick;
+  late TextComponent statusBar;
   bool showControls = true;
   bool playSounds = true;
   double soundVolume = 1.0;
@@ -39,6 +42,9 @@ class PixelAdventure extends FlameGame
       addJoystick();
       add(JumpButton());
     }
+
+    addStatusBar();
+
     return super.onLoad();
   }
 
@@ -112,5 +118,20 @@ class PixelAdventure extends FlameGame
       cam.viewfinder.anchor = Anchor.topLeft;
       addAll([cam, world]);
     });
+  }
+
+  void addStatusBar() {
+    final _regularTextStyle =
+        TextStyle(fontSize: 25, color: BasicPalette.white.color);
+    final _regular = TextPaint(style: _regularTextStyle);
+
+    statusBar = TextComponent(
+      text: 'Leben: $player.lifes',
+      anchor: Anchor.topCenter,
+      position: Vector2(size.x / 2, 20),
+      textRenderer: _regular,
+      priority: 15,
+    );
+    add(statusBar);
   }
 }

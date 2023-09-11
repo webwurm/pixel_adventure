@@ -26,6 +26,7 @@ enum PlayerState {
 class Player extends SpriteAnimationGroupComponent
     with HasGameRef<PixelAdventure>, KeyboardHandler, CollisionCallbacks {
   String character;
+  int lifes = 3;
   Player({position, this.character = 'Ninja Frog'}) : super(position: position);
 
   final double stepTime = 0.05;
@@ -266,12 +267,12 @@ class Player extends SpriteAnimationGroupComponent
   }
 
   void _respawn() async {
+    lifes -= 1;
     if (game.playSounds) FlameAudio.play('hit.wav', volume: game.soundVolume);
     const canMoveDuration = Duration(milliseconds: 400);
     gotHit = true;
     current = PlayerState.hit;
 
-    //new
     await animationTicker?.completed;
     animationTicker?.reset();
 
