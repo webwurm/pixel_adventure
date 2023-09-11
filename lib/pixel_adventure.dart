@@ -23,7 +23,7 @@ class PixelAdventure extends FlameGame
   Player player = Player(character: 'Mask Dude');
   late JoystickComponent joystick;
   bool showControls = true;
-  bool playSounds = false;
+  bool playSounds = true;
   double soundVolume = 1.0;
   List<String> levelNames = ['level_01', 'level_02'];
   int currentLevelIndex = 0;
