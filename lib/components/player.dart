@@ -5,6 +5,7 @@ import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/services.dart';
 import 'package:pixel_adventure/components/checkpoint.dart';
+import 'package:pixel_adventure/components/chicken.dart';
 import 'package:pixel_adventure/components/collision_block.dart';
 import 'package:pixel_adventure/components/custom_hitbox.dart';
 import 'package:pixel_adventure/components/saw.dart';
@@ -111,6 +112,7 @@ class Player extends SpriteAnimationGroupComponent
       if (other is Fruit) other.collidedWithPlayer();
       if (other is Saw) _respawn();
       if (other is Checkpoint && !reachedCheckpoint) _reachedCheckpoint();
+      if (other is Chicken) other.collidedWithPlayer();
     }
     super.onCollisionStart(intersectionPoints, other);
   }
@@ -306,5 +308,10 @@ class Player extends SpriteAnimationGroupComponent
 
     const waitToChangeDuration = Duration(seconds: 3);
     Future.delayed(waitToChangeDuration, () => game.loadNextLevel());
+  }
+
+  void collidedWithEnemy() {
+    // public method calls private method
+    _respawn();
   }
 }
