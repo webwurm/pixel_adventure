@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "level_01.tmx",
+    "activeFile": "level_02.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -44,16 +44,15 @@
     "map.tileWidth": 16,
     "map.width": 40,
     "openFiles": [
-        "PixelAdventure.tsx",
         "level_01.tmx",
         "level_02.tmx"
     ],
     "project": "Pixel Adventure.tiled-project",
     "property.type": "float",
     "recentFiles": [
-        "PixelAdventure.tsx",
+        "level_01.tmx",
         "level_02.tmx",
-        "level_01.tmx"
+        "PixelAdventure.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
